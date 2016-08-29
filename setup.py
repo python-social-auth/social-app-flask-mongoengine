@@ -11,15 +11,16 @@ def load_requirements():
     return open(join(dirname(__file__), 'requirements.txt')).readlines()
 
 setup(
-    name='python-social-auth-app-flask',
-    version=__import__('social_flask').__version__,
+    name='social-auth-app-flask-mongoengine',
+    version=__import__('social_flask_mongoengine').__version__,
     author='Matias Aguirre',
     author_email='matiasaguirre@gmail.com',
-    description='Python Social Authentication, Flask integration.',
+    description='Python Social Authentication, Mongoengine Flask '
+                'models integration.',
     license='BSD',
-    keywords='flask, social auth',
-    url='https://github.com/python-social-auth/social-app-flask',
-    packages=['social_flask'],
+    keywords='flask, mongoengine, social auth',
+    url='https://github.com/python-social-auth/social-app-flask-mongoengine',
+    packages=['social_flask_mongoengine'],
     long_description=long_description(),
     install_requires=load_requirements(),
     classifiers=[

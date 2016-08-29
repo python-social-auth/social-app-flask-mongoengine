@@ -9,7 +9,7 @@ contribution should be followed if you want to submit a pull request.
 ## How to prepare
 
 * You need a [GitHub account](https://github.com/signup/free)
-* Submit an [issue ticket](https://github.com/python-social-auth/python-social-auth-core/issues)
+* Submit an [issue ticket](https://github.com/python-social-auth/social-app-flask-mongoengine/issues)
   for your issue if there is no one yet.
 	* Describe the issue and include steps to reproduce if it's a bug.
 	* Ensure to mention the earliest version that you know is affected.

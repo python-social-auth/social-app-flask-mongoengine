@@ -1,2 +1,2 @@
-six
-python-social-auth-core
+social-auth-storage-mongoengine
+social-auth-app-flask
