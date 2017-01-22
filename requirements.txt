@@ -1,2 +1,2 @@
-social-auth-storage-mongoengine
-social-auth-app-flask
+social-auth-storage-mongoengine >= 1.0.0
+social-auth-app-flask >= 1.0.0

@@ -7,6 +7,8 @@ and this project adheres to [Semantic Versioning](http://semver.org/).
 
 ## [Unreleased]
 
+## [1.0.0](https://github.com/python-social-auth/social-app-flask-mongoengine/releases/tag/1.0.0) - 2017-01-22
+
 ### Added
 - Partial pipeline db storage solution
 
