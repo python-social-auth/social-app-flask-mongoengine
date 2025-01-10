@@ -1,13 +1,15 @@
 """Flask SQLAlchemy ORM models for Social Auth"""
-from mongoengine import ReferenceField
 
-from social_core.utils import setting_name, module_member
-from social_mongoengine.storage import MongoengineUserMixin, \
-                                       MongoengineAssociationMixin, \
-                                       MongoengineNonceMixin, \
-                                       MongoengineCodeMixin, \
-                                       MongoenginePartialMixin, \
-                                       BaseMongoengineStorage
+from mongoengine import ReferenceField
+from social_core.utils import module_member, setting_name
+from social_mongoengine.storage import (
+    BaseMongoengineStorage,
+    MongoengineAssociationMixin,
+    MongoengineCodeMixin,
+    MongoengineNonceMixin,
+    MongoenginePartialMixin,
+    MongoengineUserMixin,
+)
 
 
 class FlaskStorage(BaseMongoengineStorage):
@@ -19,10 +21,11 @@ class FlaskStorage(BaseMongoengineStorage):
 
 
 def init_social(app, db):
-    User = module_member(app.config[setting_name('USER_MODEL')])
+    User = module_member(app.config[setting_name("USER_MODEL")])
 
     class UserSocialAuth(db.Document, MongoengineUserMixin):
         """Social Auth association model"""
+
         user = ReferenceField(User)
 
         @classmethod
@@ -31,19 +34,15 @@ def init_social(app, db):
 
     class Nonce(db.Document, MongoengineNonceMixin):
         """One use numbers"""
-        pass
 
     class Association(db.Document, MongoengineAssociationMixin):
         """OpenId account association"""
-        pass
 
     class Code(db.Document, MongoengineCodeMixin):
         """Mail validation single one time use code"""
-        pass
 
     class Partial(db.Document, MongoenginePartialMixin):
         """Partial pipeline storage"""
-        pass
 
     # Set the references in the storage class
     FlaskStorage.user = UserSocialAuth
