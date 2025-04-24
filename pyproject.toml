@@ -4,28 +4,28 @@ requires = ["setuptools>=78.0.2"]
 
 [project]
 authors = [
-  {name = "Matias Aguirre", email = "matiasaguirre@gmail.com"}
+  {email = "matiasaguirre@gmail.com", name = "Matias Aguirre"}
 ]
 classifiers = [
   "Development Status :: 4 - Beta",
-  "Topic :: Internet",
-  "Intended Audience :: Developers",
   "Environment :: Web Environment",
-  "Programming Language :: Python",
+  "Intended Audience :: Developers",
   "Programming Language :: Python :: 2.7",
-  "Programming Language :: Python :: 3"
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python",
+  "Topic :: Internet"
 ]
 dependencies = [
-  "social-auth-storage-mongoengine >= 1.0.0",
-  "social-auth-app-flask >= 1.0.0"
+  "social-auth-app-flask >= 1.0.0",
+  "social-auth-storage-mongoengine >= 1.0.0"
 ]
 description = "Python Social Authentication, Mongoengine Flask models integration."
 dynamic = ["version"]
 keywords = [
+  "auth",
   "flask",
   "mongoengine",
-  "social",
-  "auth"
+  "social"
 ]
 license = "BSD-3-Clause"
 license-files = ["LICENSE"]
